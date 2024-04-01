@@ -18,6 +18,3 @@ def test_not_valid_login_scenarios(page: Page, username: str, password: str, err
     expect(page.locator("[data-test=\"error\"]")).to_be_visible()
     expect(page.locator("[data-test=\"error\"]")).to_contain_text(error_message)
     expect(page).to_have_url('https://www.saucedemo.com/')
-    page.wait_for_timeout(2000)
-
-
